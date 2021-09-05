@@ -273,6 +273,10 @@ PRODUCT_PACKAGES += \
     vendor.oneplus.fingerprint.extension@1.0 \
     vendor.oneplus.hardware.display@1.0
 
+# FOD
+TARGET_HAS_FOD := true
+EXTRA_FOD_ANIMATIONS := true
+
 # GPS
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/apdr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/apdr.conf \
@@ -525,3 +529,7 @@ ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.sys.disable_rescue=true
 endif
+
+# Include gapps
+TARGET_GAPPS_ARCH := arm64
+$(call inherit-product, vendor/gapps/config.mk)

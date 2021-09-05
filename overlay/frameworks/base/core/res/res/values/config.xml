@@ -319,6 +319,23 @@
         <item>259</item>
     </integer-array>
 
+    <!-- Whether device has physical alert slider.-->
+    <bool name="config_hasAlertSlider">true</bool>
+
+    <!-- The location of the devices physical tri state switch
+         0: Left side
+         1: Right side -->
+    <integer name="config_alertSliderLocation">1</integer>
+
+    <!-- Whether the device supports Smart Pixels -->
+    <bool name="config_supportSmartPixels">true</bool>
+
+    <!-- Whether device has warp charging support -->
+    <bool name="config_hasWarpCharger">true</bool>
+
+    <!-- Smart charging -->
+    <bool name="config_smartChargingAvailable">true</bool>
+
     <!-- Path to fast charging status file to detect whether an oem fast charger is active -->
     <string name="config_oemFastChargerStatusPath" translatable="false">/sys/class/power_supply/battery/fastchg_status</string>
 
@@ -327,5 +344,17 @@
 
     <!-- Display has physical cutout -->
     <bool name="config_physicalDisplayCutout">true</bool>
+
+    <!-- Whether to show settings for hiding notch fill -->
+    <bool name="config_showHideNotchSettings">true</bool>
+
+    <!-- Specify custom blanking delay of the display -->
+    <integer name="config_screen_off_delay">0</integer>
+
+    <!-- Default fod pressed color -->
+    <integer name="config_fod_pressed_color">1</integer>
+
+   <!-- Whether to show a custom view for FOD -->
+    <bool name="config_needCustomFODView">true</bool>
 
 </resources>
