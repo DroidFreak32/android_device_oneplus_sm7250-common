@@ -254,10 +254,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@3.0.vendor \
     vendor.qti.hardware.display.mapper@4.0.vendor
 
-# Doze
-PRODUCT_PACKAGES += \
-    OnePlusDoze
-
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3-service.clearkey
@@ -430,6 +426,7 @@ PRODUCT_PACKAGES += \
     qti_telephony_hidl_wrapper.xml \
     qti-telephony-utils \
     qti_telephony_utils.xml \
+    Development \
     telephony-ext
 
 PRODUCT_BOOT_JARS += \
@@ -532,4 +529,4 @@ endif
 
 # Include gapps
 TARGET_GAPPS_ARCH := arm64
-$(call inherit-product, vendor/gapps/config.mk)
+#$(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
