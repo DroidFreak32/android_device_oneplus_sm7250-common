@@ -532,4 +532,4 @@ endif
 
 # Include gapps
 TARGET_GAPPS_ARCH := arm64
-$(call inherit-product, vendor/gapps/config.mk)
+$(call inherit-product, vendor/pixelgapps/pixel-gapps.mk)
